@@ -1,6 +1,6 @@
 const { json } = require('body-parser');
 const connectmongodb = require('./db')
-
+const routes = require('../server/routes/notes')
 const express = require('express');
 const { prototype } = require('node:events');
 

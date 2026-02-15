@@ -1,17 +1,12 @@
-const express = require('express');
+const mongoose = require("mongoose");
 
-const app = express();
-const routes = express.Router();
+const noteSchema = new mongoose.Schema({
+  title: String,
+  content: String,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-const controller = require("../controller/NotesControl")
-
-//Get all notes
-routes.get('/',controller.shownote);
-
-//Create a note
-routes.post('/',controller.createnote);
-
-//Delete a Note
-routes.delete('/:id',controller.deleltenotes)
-
-module.exports = routes;
+module.exports = mongoose.model("Note", noteSchema);
