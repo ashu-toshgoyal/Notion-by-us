@@ -10,10 +10,12 @@ connectmongodb();
 
 app.use(express.json);
 
+app.use('/api/notes',routes);
+
 app.get('/',(req,res)=>{
     res.send("Server is Running");
 })
 
 app.listen(5000,()=>{
-    console.log(`Server Running on ${5000}`)
+    console.log(`Server Running on http://localhost:${5000}/`)
 });

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    background: black;
+    color: white;
+}
+
+.editor {
+    flex: 1;
+    background: #111;
+}
+
+.modechange {
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 17px;
+    background-color: #c7c7c7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.icon svg {
+    height: 20px;
+    width: 20px;
+    color: grey;
+}
